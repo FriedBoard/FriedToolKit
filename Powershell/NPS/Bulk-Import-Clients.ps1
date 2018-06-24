@@ -12,5 +12,5 @@ $csv = Import-Csv -Delimiter ";"  "nps_clients.csv"
 #Loop to add the clients
 foreach($client in $csv){
     #Add the client
-    New-NpsRadiusClient -Address $client.address -Name $client.address -SharedSecret $client.secret
+    New-NpsRadiusClient -Address $client.address -Name $client.name -SharedSecret $client.secret
 }
