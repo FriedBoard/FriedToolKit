@@ -33,7 +33,7 @@ def checkVlans():
 			print(str(requiredVlan) + ' is configured')
 		else:
 			missingVlans.append(requiredVlan)
-
+	
 	if len(missingVlans) > 0:
 		print('The following VLANs are missing:')
 		for missingVlan in missingVlans:
