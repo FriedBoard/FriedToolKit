@@ -6,8 +6,6 @@
 
 # Variables used in the script
 requiredVlans = []
-configuredVlans = []
-missingVlans = []
 
 # A function to get multi line input from a user
 def multi_input(requestText):
@@ -26,6 +24,9 @@ requiredVlans = list(multi_input('Please insert your required VLANs: '))
 def checkVlans():
 	# Get configured VLANs
 	configuredVlans = list(multi_input('Please insert the result of \"show vlan\"'))
+
+	# List to temporarily store missing vlans
+	missingVlans = []
 
 	# Check if the requiredVlan is configured
 	for requiredVlan in requiredVlans:
